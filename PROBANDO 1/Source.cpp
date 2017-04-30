@@ -1,5 +1,7 @@
 #include <iostream>
 using namespace std;
-int a;
 
-
+int main() {
+	system("pause");
+	return 0;
+}
