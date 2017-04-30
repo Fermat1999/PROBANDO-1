@@ -1,10 +1,5 @@
 #include <iostream>
-using namespace std;
-// MODA.cpp: archivo de proyecto principal.
-
-#include "stdafx.h"
-#include<iostream>
-#include<conio.h>
+#include <conio.h>
 using namespace std;
 using namespace System;
 void Generar_Numeros(int*notas, int n)
