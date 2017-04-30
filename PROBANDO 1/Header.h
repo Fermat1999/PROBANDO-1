@@ -34,7 +34,12 @@ CProducto::CProducto()
 }
 CProducto::CProducto(char *Nombre, char * Marca, double Precio_Neto, double Precio_Bruto)
 {
-
+	this->Nombre = new char[100];
+	strcpy(this->Nombre, Nombre);
+	this->Marca = new char[100];
+	strcpy(this->Marca, Marca);
+	this->Precio_Bruto = Precio_Bruto;
+	this->Precio_Neto = Precio_Neto;
 }
 CProducto::~CProducto()
 {
