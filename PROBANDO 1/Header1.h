@@ -16,7 +16,7 @@ public:
 	void Registrar_Producto(char *Nombre, char * Marca, double Precio_Neto, double Precio_Bruto);
 	void Eliminar_Producto(int pos);
 	void Eliminar_todo_Productos();
-	vector<CProducto*>*Reporte1();
+	double Reporte1();
 	vector<CProducto*>*Reporte2();
 
 };
@@ -56,7 +56,7 @@ void CVecProducto::Eliminar_todo_Productos()
 		Eliminar_Producto(i);
 	}
 }
-vector<CProducto*>*CVecProducto::Reporte1()
+double CVecProducto::Reporte1()
 {
 	double total = 0.0;
 	for (int i = 0;i < arrProducto->size();i++) 
@@ -68,6 +68,19 @@ vector<CProducto*>*CVecProducto::Reporte1()
 }
 vector<CProducto*>*CVecProducto::Reporte2()
 {
+	double resultado;
+	double promedio = 0.0;
+	for (int i = 0;i < arrProducto->size();i++)
+	{
+		promedio += arrProducto->at(i)->GET_Precio_Neto;
+	}
+	resultado = promedio / arrProducto->size();
 
-
+	vector<CProducto*>* Aux = new vector<CProducto*>();
+	for (int i = 0;i<arrProducto->size();i++)
+	{
+		if (arrProducto->at(i)->GET_Precio_Neto() > resultado);//CONDICION
+		Aux->push_back(arrProducto->at(i));
+	}
+	return Aux;
 }
