@@ -15,7 +15,7 @@ public:
 	vector<CProducto*>*Get_arrProducto();
 	void Registrar_Producto(char *Nombre, char * Marca, double Precio_Neto, double Precio_Bruto);
 	void Eliminar_Producto(int pos);
-	void Eliminar_todo_Productos(int pos);
+	void Eliminar_todo_Productos();
 	vector<CProducto*>*Reporte1();
 	vector<CProducto*>*Reporte2();
 	vector<CProducto*>*Reporte3();
@@ -46,10 +46,11 @@ void CVecProducto::Eliminar_Producto(int pos)
 {
 	arrProducto->erase(arrProducto->begin() + pos);
 }
-void CVecProducto::Eliminar_todo_Productos(int pos)//esta cagado esto creo///
+void CVecProducto::Eliminar_todo_Productos()
 {
-	for ( int i = 0;  i<= 0 ; i=pos )
+	int n = Get_arrProducto()->size();
+	for ( int i = n-1;  i>=0; i-- )
 	{
-		arrProducto->erase(arrProducto->begin() + pos);
+		Eliminar_Producto(i);
 	}
 }
