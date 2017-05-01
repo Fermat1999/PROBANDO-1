@@ -375,7 +375,7 @@ namespace PROBANDO1 {
 		double PNeto = Convert::ToDouble(PRENETO->Text);
 		double PBruto = Convert::ToDouble(PREBRUTO->Text);
 		objVecProducto->Registrar_Producto(Nombre, marca, PNeto, PBruto);
-		
+		CargarProductos();
 	}
 private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 	objVecProducto = new CVecProducto();
@@ -396,5 +396,27 @@ private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e
 
 			 }
 		 }
+
+		 void CargarReporte1()
+		 {
+			 listBox2->Items->Clear();
+			 double promedio
+
+		 }
+
+		 void CargarReporte2()
+		 {
+			 vector<CProducto*>*arrProducto = objVecProducto->Reporte2();
+			 for (int i = 0; i < arrProducto->size(); i++)
+			 {
+				 String^ strNombre = gcnew String(arrProducto->at(i)->GET_Nombre());
+				 String^ strMarca = gcnew String(arrProducto->at(i)->GET_Marca());
+				 listBox1->Items->Add(strNombre + "|" +
+					 strMarca + "|" +
+					 arrProducto->at(i)->GET_Precio_Neto().ToString() + "|" +
+					 arrProducto->at(i)->GET_Precio_Bruto().ToString());
+			 }
+		 }
+
 };
 }
