@@ -59,10 +59,11 @@ namespace PROBANDO1 {
 	private: System::Windows::Forms::Button^  button2;
 	private: System::Windows::Forms::Label^  label5;
 	private: System::Windows::Forms::ListBox^  listBox1;
-	private: System::Windows::Forms::ListBox^  listBox2;
+
 	private: System::Windows::Forms::Label^  label6;
 	private: System::Windows::Forms::ListBox^  listBox3;
 	private: System::Windows::Forms::Label^  label7;
+	private: System::Windows::Forms::TextBox^  TXPromedioPB;
 	protected:
 
 	private:
@@ -96,11 +97,11 @@ namespace PROBANDO1 {
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
-			this->listBox2 = (gcnew System::Windows::Forms::ListBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->listBox3 = (gcnew System::Windows::Forms::ListBox());
 			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->TXPromedioPB = (gcnew System::Windows::Forms::TextBox());
 			this->panel1->SuspendLayout();
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
@@ -281,7 +282,7 @@ namespace PROBANDO1 {
 			// 
 			// tabPage3
 			// 
-			this->tabPage3->Controls->Add(this->listBox2);
+			this->tabPage3->Controls->Add(this->TXPromedioPB);
 			this->tabPage3->Controls->Add(this->label6);
 			this->tabPage3->Location = System::Drawing::Point(4, 24);
 			this->tabPage3->Name = L"tabPage3";
@@ -290,21 +291,14 @@ namespace PROBANDO1 {
 			this->tabPage3->Text = L"Reporte 1";
 			this->tabPage3->UseVisualStyleBackColor = true;
 			// 
-			// listBox2
-			// 
-			this->listBox2->FormattingEnabled = true;
-			this->listBox2->ItemHeight = 15;
-			this->listBox2->Location = System::Drawing::Point(11, 49);
-			this->listBox2->Name = L"listBox2";
-			this->listBox2->Size = System::Drawing::Size(296, 184);
-			this->listBox2->TabIndex = 1;
-			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(8, 15);
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label6->Location = System::Drawing::Point(8, 34);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(290, 15);
+			this->label6->Size = System::Drawing::Size(319, 16);
 			this->label6->TabIndex = 0;
 			this->label6->Text = L"El promedio del Precio Bruto de todos los productos";
 			// 
@@ -336,6 +330,13 @@ namespace PROBANDO1 {
 			this->label7->Size = System::Drawing::Size(258, 30);
 			this->label7->TabIndex = 0;
 			this->label7->Text = L"Todos los productos en donde su Precio Neto \r\nes mayor al promedio";
+			// 
+			// TXPromedioPB
+			// 
+			this->TXPromedioPB->Location = System::Drawing::Point(106, 75);
+			this->TXPromedioPB->Name = L"TXPromedioPB";
+			this->TXPromedioPB->Size = System::Drawing::Size(100, 21);
+			this->TXPromedioPB->TabIndex = 1;
 			// 
 			// MyForm
 			// 
@@ -376,6 +377,8 @@ namespace PROBANDO1 {
 		double PBruto = Convert::ToDouble(PREBRUTO->Text);
 		objVecProducto->Registrar_Producto(Nombre, marca, PNeto, PBruto);
 		CargarProductos();
+		CargarReporte1();
+		CargarReporte2();
 	}
 private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 	objVecProducto = new CVecProducto();
@@ -399,8 +402,9 @@ private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e
 
 		 void CargarReporte1()
 		 {
-			 listBox2->Items->Clear();
-			 double promedio
+
+			 TXPromedioPB->Text = objVecProducto->Reporte1().ToString();
+			 
 
 		 }
 
