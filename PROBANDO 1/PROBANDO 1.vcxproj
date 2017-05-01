@@ -35,6 +35,11 @@
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MyForm.resx">
+      <DependentUpon>MyForm.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D7E2EE2F-4EE0-480B-BFF6-6909B6FF80C2}</ProjectGuid>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
