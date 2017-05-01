@@ -58,12 +58,14 @@ void CVecProducto::Eliminar_todo_Productos()
 }
 vector<CProducto*>*CVecProducto::Reporte1()
 {
-	vector<CProducto*>*Aux = new vector<CProducto*>();
-
-	for (int i = 0;i < arrProducto->size();i++);
+	double total = 0.0;
+	for (int i = 0;i < arrProducto->size();i++) 
+	{
+		total += arrProducto->at(i)->GET_Precio_Bruto;
+	}
+	return  total / arrProducto->size();
 
 }
-
 vector<CProducto*>*CVecProducto::Reporte2()
 {
 
