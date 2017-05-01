@@ -18,7 +18,6 @@ public:
 	void Eliminar_todo_Productos();
 	vector<CProducto*>*Reporte1();
 	vector<CProducto*>*Reporte2();
-	vector<CProducto*>*Reporte3();
 
 };
 
@@ -41,7 +40,7 @@ vector<CProducto*>* CVecProducto::Get_arrProducto()
 void CVecProducto::Registrar_Producto(char *Nombre, char * Marca, double Precio_Neto, double Precio_Bruto)
 {
 	CProducto*objProducto = new CProducto(Nombre, Marca, Precio_Neto, Precio_Bruto);
-	
+	arrProducto->push_back(objProducto);
 
 }
 
@@ -56,4 +55,17 @@ void CVecProducto::Eliminar_todo_Productos()
 	{
 		Eliminar_Producto(i);
 	}
+}
+vector<CProducto*>*CVecProducto::Reporte1()
+{
+	vector<CProducto*>*Aux = new vector<CProducto*>();
+
+	for (int i = 0;i < arrProducto->size();i++);
+
+}
+
+vector<CProducto*>*CVecProducto::Reporte2()
+{
+
+
 }
