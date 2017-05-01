@@ -23,9 +23,6 @@ public:
 
 CVecProducto::CVecProducto()
 {
-}
-CVecProducto::CVecProducto()
-{
 	arrProducto = new vector<CProducto*>();
 }
 
@@ -61,7 +58,7 @@ double CVecProducto::Reporte1()
 	double total = 0.0;
 	for (int i = 0;i < arrProducto->size();i++) 
 	{
-		total += arrProducto->at(i)->GET_Precio_Bruto;
+		total += arrProducto->at(i)->GET_Precio_Bruto();
 	}
 	return  total / arrProducto->size();
 
@@ -72,7 +69,7 @@ vector<CProducto*>*CVecProducto::Reporte2()
 	double promedio = 0.0;
 	for (int i = 0;i < arrProducto->size();i++)
 	{
-		promedio += arrProducto->at(i)->GET_Precio_Neto;
+		promedio += arrProducto->at(i)->GET_Precio_Neto();
 	}
 	resultado = promedio / arrProducto->size();
 

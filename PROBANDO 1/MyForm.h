@@ -389,8 +389,11 @@ private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e
 			 {
 				 String^ strNombre = gcnew String(arrProducto->at(i)->GET_Nombre());
 				 String^ strMarca = gcnew String(arrProducto->at(i)->GET_Marca());
-				 listBox1->Items->Add(strNombre)+"|"+
-					 arrProducto->at(i)
+				 listBox1->Items->Add(strNombre + "|" +
+					 strMarca + "|" +
+					 arrProducto->at(i)->GET_Precio_Neto().ToString() + "|" +
+					 arrProducto->at(i)->GET_Precio_Bruto().ToString());
+
 			 }
 		 }
 };
