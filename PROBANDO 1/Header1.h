@@ -41,7 +41,10 @@ vector<CProducto*>* CVecProducto::Get_arrProducto()
 void CVecProducto::Registrar_Producto(char *Nombre, char * Marca, double Precio_Neto, double Precio_Bruto)
 {
 	CProducto*objProducto = new CProducto(Nombre, Marca, Precio_Neto, Precio_Bruto);
+	
+
 }
+
 void CVecProducto::Eliminar_Producto(int pos)
 {
 	arrProducto->erase(arrProducto->begin() + pos);
