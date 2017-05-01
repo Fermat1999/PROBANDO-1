@@ -82,25 +82,25 @@ namespace PROBANDO1 {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
-			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
-			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->nombre = (gcnew System::Windows::Forms::TextBox());
-			this->label = (gcnew System::Windows::Forms::Label());
-			this->Marca = (gcnew System::Windows::Forms::TextBox());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->PRENETO = (gcnew System::Windows::Forms::TextBox());
-			this->PREBRUTO = (gcnew System::Windows::Forms::TextBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
-			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label = (gcnew System::Windows::Forms::Label());
+			this->PREBRUTO = (gcnew System::Windows::Forms::TextBox());
+			this->PRENETO = (gcnew System::Windows::Forms::TextBox());
+			this->Marca = (gcnew System::Windows::Forms::TextBox());
+			this->nombre = (gcnew System::Windows::Forms::TextBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
+			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->listBox2 = (gcnew System::Windows::Forms::ListBox());
-			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->listBox3 = (gcnew System::Windows::Forms::ListBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
@@ -166,6 +166,80 @@ namespace PROBANDO1 {
 			this->tabPage1->Text = L"Agregar Producto";
 			this->tabPage1->UseVisualStyleBackColor = true;
 			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(229, 194);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->TabIndex = 3;
+			this->button1->Text = L"AGREGAR";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(6, 108);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(78, 15);
+			this->label4->TabIndex = 2;
+			this->label4->Text = L"Precio Neto=";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(8, 147);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(81, 15);
+			this->label3->TabIndex = 2;
+			this->label3->Text = L"Precio Bruto=";
+			// 
+			// label
+			// 
+			this->label->AutoSize = true;
+			this->label->Location = System::Drawing::Point(8, 63);
+			this->label->Name = L"label";
+			this->label->Size = System::Drawing::Size(48, 15);
+			this->label->TabIndex = 2;
+			this->label->Text = L"Marca: ";
+			// 
+			// PREBRUTO
+			// 
+			this->PREBRUTO->Location = System::Drawing::Point(90, 144);
+			this->PREBRUTO->Name = L"PREBRUTO";
+			this->PREBRUTO->Size = System::Drawing::Size(225, 21);
+			this->PREBRUTO->TabIndex = 1;
+			// 
+			// PRENETO
+			// 
+			this->PRENETO->Location = System::Drawing::Point(90, 108);
+			this->PRENETO->Name = L"PRENETO";
+			this->PRENETO->Size = System::Drawing::Size(225, 21);
+			this->PRENETO->TabIndex = 1;
+			// 
+			// Marca
+			// 
+			this->Marca->Location = System::Drawing::Point(72, 63);
+			this->Marca->Name = L"Marca";
+			this->Marca->Size = System::Drawing::Size(243, 21);
+			this->Marca->TabIndex = 1;
+			// 
+			// nombre
+			// 
+			this->nombre->Location = System::Drawing::Point(72, 18);
+			this->nombre->Name = L"nombre";
+			this->nombre->Size = System::Drawing::Size(243, 21);
+			this->nombre->TabIndex = 1;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(8, 18);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(58, 15);
+			this->label2->TabIndex = 0;
+			this->label2->Text = L"Nombre: ";
+			// 
 			// tabPage2
 			// 
 			this->tabPage2->Controls->Add(this->button2);
@@ -179,6 +253,32 @@ namespace PROBANDO1 {
 			this->tabPage2->Text = L"Lista Productos";
 			this->tabPage2->UseVisualStyleBackColor = true;
 			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(221, 231);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(75, 23);
+			this->button2->TabIndex = 2;
+			this->button2->Text = L"ELMINAR";
+			this->button2->UseVisualStyleBackColor = true;
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(8, 10);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(0, 15);
+			this->label5->TabIndex = 1;
+			// 
+			// listBox1
+			// 
+			this->listBox1->FormattingEnabled = true;
+			this->listBox1->ItemHeight = 15;
+			this->listBox1->Location = System::Drawing::Point(8, 10);
+			this->listBox1->Name = L"listBox1";
+			this->listBox1->Size = System::Drawing::Size(322, 214);
+			this->listBox1->TabIndex = 0;
+			// 
 			// tabPage3
 			// 
 			this->tabPage3->Controls->Add(this->listBox2);
@@ -189,6 +289,24 @@ namespace PROBANDO1 {
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"Reporte 1";
 			this->tabPage3->UseVisualStyleBackColor = true;
+			// 
+			// listBox2
+			// 
+			this->listBox2->FormattingEnabled = true;
+			this->listBox2->ItemHeight = 15;
+			this->listBox2->Location = System::Drawing::Point(11, 49);
+			this->listBox2->Name = L"listBox2";
+			this->listBox2->Size = System::Drawing::Size(296, 184);
+			this->listBox2->TabIndex = 1;
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(8, 15);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(290, 15);
+			this->label6->TabIndex = 0;
+			this->label6->Text = L"El promedio del Precio Bruto de todos los productos";
 			// 
 			// tabPage4
 			// 
@@ -201,122 +319,14 @@ namespace PROBANDO1 {
 			this->tabPage4->Text = L"Reporte 2";
 			this->tabPage4->UseVisualStyleBackColor = true;
 			// 
-			// label2
+			// listBox3
 			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(8, 18);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(58, 15);
-			this->label2->TabIndex = 0;
-			this->label2->Text = L"Nombre: ";
-			// 
-			// nombre
-			// 
-			this->nombre->Location = System::Drawing::Point(72, 18);
-			this->nombre->Name = L"nombre";
-			this->nombre->Size = System::Drawing::Size(243, 21);
-			this->nombre->TabIndex = 1;
-			// 
-			// label
-			// 
-			this->label->AutoSize = true;
-			this->label->Location = System::Drawing::Point(8, 63);
-			this->label->Name = L"label";
-			this->label->Size = System::Drawing::Size(48, 15);
-			this->label->TabIndex = 2;
-			this->label->Text = L"Marca: ";
-			// 
-			// Marca
-			// 
-			this->Marca->Location = System::Drawing::Point(72, 63);
-			this->Marca->Name = L"Marca";
-			this->Marca->Size = System::Drawing::Size(243, 21);
-			this->Marca->TabIndex = 1;
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(8, 147);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(81, 15);
-			this->label3->TabIndex = 2;
-			this->label3->Text = L"Precio Bruto=";
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(6, 108);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(78, 15);
-			this->label4->TabIndex = 2;
-			this->label4->Text = L"Precio Neto=";
-			// 
-			// PRENETO
-			// 
-			this->PRENETO->Location = System::Drawing::Point(90, 108);
-			this->PRENETO->Name = L"PRENETO";
-			this->PRENETO->Size = System::Drawing::Size(225, 21);
-			this->PRENETO->TabIndex = 1;
-			// 
-			// PREBRUTO
-			// 
-			this->PREBRUTO->Location = System::Drawing::Point(90, 144);
-			this->PREBRUTO->Name = L"PREBRUTO";
-			this->PREBRUTO->Size = System::Drawing::Size(225, 21);
-			this->PREBRUTO->TabIndex = 1;
-			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(229, 194);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
-			this->button1->TabIndex = 3;
-			this->button1->Text = L"AGREGAR";
-			this->button1->UseVisualStyleBackColor = true;
-			// 
-			// listBox1
-			// 
-			this->listBox1->FormattingEnabled = true;
-			this->listBox1->ItemHeight = 15;
-			this->listBox1->Location = System::Drawing::Point(8, 10);
-			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(322, 214);
-			this->listBox1->TabIndex = 0;
-			// 
-			// label5
-			// 
-			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(8, 10);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(0, 15);
-			this->label5->TabIndex = 1;
-			// 
-			// button2
-			// 
-			this->button2->Location = System::Drawing::Point(221, 231);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(75, 23);
-			this->button2->TabIndex = 2;
-			this->button2->Text = L"ELMINAR";
-			this->button2->UseVisualStyleBackColor = true;
-			// 
-			// label6
-			// 
-			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(8, 15);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(290, 15);
-			this->label6->TabIndex = 0;
-			this->label6->Text = L"El promedio del Precio Bruto de todos los productos";
-			// 
-			// listBox2
-			// 
-			this->listBox2->FormattingEnabled = true;
-			this->listBox2->ItemHeight = 15;
-			this->listBox2->Location = System::Drawing::Point(11, 49);
-			this->listBox2->Name = L"listBox2";
-			this->listBox2->Size = System::Drawing::Size(296, 184);
-			this->listBox2->TabIndex = 1;
+			this->listBox3->FormattingEnabled = true;
+			this->listBox3->ItemHeight = 15;
+			this->listBox3->Location = System::Drawing::Point(11, 55);
+			this->listBox3->Name = L"listBox3";
+			this->listBox3->Size = System::Drawing::Size(307, 169);
+			this->listBox3->TabIndex = 1;
 			// 
 			// label7
 			// 
@@ -327,15 +337,6 @@ namespace PROBANDO1 {
 			this->label7->TabIndex = 0;
 			this->label7->Text = L"Todos los productos en donde su Precio Neto \r\nes mayor al promedio";
 			// 
-			// listBox3
-			// 
-			this->listBox3->FormattingEnabled = true;
-			this->listBox3->ItemHeight = 15;
-			this->listBox3->Location = System::Drawing::Point(11, 55);
-			this->listBox3->Name = L"listBox3";
-			this->listBox3->Size = System::Drawing::Size(307, 169);
-			this->listBox3->TabIndex = 1;
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -345,6 +346,7 @@ namespace PROBANDO1 {
 			this->Controls->Add(this->panel1);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			this->tabControl1->ResumeLayout(false);
@@ -360,5 +362,36 @@ namespace PROBANDO1 {
 
 		}
 #pragma endregion
-	};
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+		if (nombre->Text->Length == 0 || Marca->Text->Length == 0||PRENETO->Text->Length ==0|| PREBRUTO->Text->Length == 0)
+		{
+			MessageBox::Show("Por favor, completar todos los campos");
+			return;
+		}
+		char*Nombre = new char[100];
+		sprintf(Nombre, "%s", nombre->Text);
+		char*marca = new char[100];
+		sprintf(marca, "%s", Marca->Text);
+		double PNeto = Convert::ToDouble(PRENETO->Text);
+		double PBruto = Convert::ToDouble(PREBRUTO->Text);
+		objVecProducto->Registrar_Producto(Nombre, marca, PNeto, PBruto);
+		
+	}
+private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
+	objVecProducto = new CVecProducto();
+	
+}
+		 void CargarProductos()
+		 {
+			 listBox1->Items->Clear();
+			 vector<CProducto*>*arrProducto = objVecProducto->Get_arrProducto();
+			 for (int i = 0;i < arrProducto->size();i++)
+			 {
+				 String^ strNombre = gcnew String(arrProducto->at(i)->GET_Nombre());
+				 String^ strMarca = gcnew String(arrProducto->at(i)->GET_Marca());
+				 listBox1->Items->Add(strNombre)+"|"+
+					 arrProducto->at(i)
+			 }
+		 }
+};
 }
